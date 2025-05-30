@@ -6,6 +6,7 @@ public class StageUI : MonoBehaviour
     [SerializeField]
     private CustomButton[] customButtons;
 
+
     private int currentIndex;
 
     void Start()
@@ -14,6 +15,7 @@ public class StageUI : MonoBehaviour
         {
             customButtons[i].setIndex(i);
             customButtons[i].onClick.AddListener(OnCustomButtonClicked);
+            customButtons[i].targetGraphic.color = Color.blue;
         }
     }
 
